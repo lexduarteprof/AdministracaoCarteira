@@ -5,14 +5,16 @@ import java.time.LocalDate;
 public class TituloPublicoLFT extends AtivoFinanceiro{
 
     public TituloPublicoLFT(LocalDate dataVencimento) {
-        super(dataVencimento);
+        //super(dataVencimento);
         this.nome = "LFT";
         this.descricao = "Título público Federal denominado LFT, " +
                 "possui rendimento pós-fixado, corrigido pela SELIC!";
     }
 
-    @Override
+    //@Override
     public double calcularPreco(double Taxa, LocalDate dataCalculo) {
+
+        /*
 
         if (this.getVNA() == 0) {
             throw new ArithmeticException("Para cálculo do título " +
@@ -29,6 +31,10 @@ public class TituloPublicoLFT extends AtivoFinanceiro{
             return precoCalculado;
 
         }
+
+         */
+
+        return 0;
 
     }
 

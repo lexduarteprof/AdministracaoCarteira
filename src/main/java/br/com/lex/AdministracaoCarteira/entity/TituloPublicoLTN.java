@@ -6,12 +6,12 @@ public class TituloPublicoLTN extends AtivoFinanceiro {
 
 
     public TituloPublicoLTN(LocalDate dataDeVencimento) {
-        super(dataDeVencimento);
+        //super(dataDeVencimento);
         this.nome = "LTN";
         this.descricao = "Título público Federal denominado LTN, possui rendimento pré-fixado!";
     }
 
-    @Override
+   // @Override
     public double calcularPreco(double Taxa, LocalDate dataCalculo) {
 
         double precoCalculado = 0;

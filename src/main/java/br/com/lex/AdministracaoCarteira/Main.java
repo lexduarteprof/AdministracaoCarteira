@@ -13,6 +13,7 @@ import java.util.Calendar;
 public class Main {
     public static void main(String[] args) {
 
+        /*
 
         //Criação dos objetos para utilização de datas
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
@@ -72,7 +73,7 @@ public class Main {
         //Quarta compra
 
         TituloPublicoLFT LFT_20240101a = new  TituloPublicoLFT(dataVencimento);
-        LFT_20240101a.setVNA(5115.266868);
+        //LFT_20240101a.setVNA(5115.266868);
         carteiraCampea.adicionarAtivo(LFT_20240101a, 12000, dataCompraCarteira,
                 0.02);
 
@@ -95,11 +96,16 @@ public class Main {
 
         //Realização da marcação a mercado dos ativos da carteira
         LocalDate dataDaMarcacao = LocalDate.parse("2023/06/01", dateTimeFormatter);
+
+        /*
+
         LTN_20240101a.setTaxaDeMercado(10.5);
         LTN_20240101b.setTaxaDeMercado(10.5);
         LTN_20240101c.setTaxaDeMercado(10.5);
         LFT_20240101a.setVNA(5315.11232);
         LFT_20240101a.setTaxaDeMercado(0.02);
+
+
 
         System.out.println(String.format("%,.2f", carteiraCampea.getValorDeMercado(dataDaMarcacao)));
 
@@ -143,8 +149,18 @@ public class Main {
         movimentoDaCarteira_2.setQuantidade(3000);
         movimentoDaCarteira_2.setAtivoFinanceiro(LTN_20240101a);
 
+        MovimentoDaCarteira movimentoDaCarteira_3 = new MovimentoDaCarteira();
+        movimentoDaCarteira_3.setCarteiraDeAtivos(carteiraCampea);
+        movimentoDaCarteira_3.setDataDoMovimento(LocalDate.parse("2023/01/25", dateTimeFormatter));
+        movimentoDaCarteira_3.setMovimentoId(3);
+        movimentoDaCarteira_3.setTaxa(10.9);
+        movimentoDaCarteira_3.setOperacao(MovimentoDaCarteira.OPERACAO.VENDA);
+        movimentoDaCarteira_3.setQuantidade(3000);
+        movimentoDaCarteira_3.setAtivoFinanceiro(LTN_20240101a);
 
         System.out.println(movimentoDaCarteira_2.toString());
+
+        */
 
     }
 }
