@@ -6,6 +6,7 @@ import br.com.lex.AdministracaoCarteira.service.impl.MovimentoCarteiraImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -15,10 +16,10 @@ public class MovimentoCarteiraController {
     @Autowired
     MovimentoCarteiraImpl movimentoCarteiraservice;
 
-    @PostMapping("/incluir")
-    public MovimentoDaCarteira incluir(@RequestBody MovimentoDaCarteira movimentoDaCarteira){
+    @PostMapping("/adicionarMovimento")
+    public MovimentoDaCarteira incluir(@Valid @RequestBody MovimentoDaCarteira movimentoDaCarteira) throws Exception {
 
-        return movimentoCarteiraservice.incluir(movimentoDaCarteira);
+        return movimentoCarteiraservice.adicionarMovimento(movimentoDaCarteira);
 
     }
 

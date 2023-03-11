@@ -5,6 +5,7 @@ import br.com.lex.AdministracaoCarteira.service.impl.AtivoServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -29,7 +30,7 @@ public class AtivoController {
     }
 
     @PostMapping("")
-    public AtivoFinanceiro incluir(@RequestBody AtivoFinanceiro ativoFinanceiro){
+    public AtivoFinanceiro incluir(@Valid @RequestBody AtivoFinanceiro ativoFinanceiro){
 
         return service.incluir(ativoFinanceiro);
 

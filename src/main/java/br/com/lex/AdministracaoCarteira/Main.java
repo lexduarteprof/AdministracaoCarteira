@@ -1,9 +1,6 @@
 package br.com.lex.AdministracaoCarteira;
 
-import br.com.lex.AdministracaoCarteira.entity.CarteiraDeAtivos;
-import br.com.lex.AdministracaoCarteira.entity.MovimentoDaCarteira;
-import br.com.lex.AdministracaoCarteira.entity.TituloPublicoLFT;
-import br.com.lex.AdministracaoCarteira.entity.TituloPublicoLTN;
+import br.com.lex.AdministracaoCarteira.entity.*;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -161,6 +158,16 @@ public class Main {
         System.out.println(movimentoDaCarteira_2.toString());
 
         */
+
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+
+        TituloPublicoLFT tituloPublicoLFT = new TituloPublicoLFT(LocalDate.parse("2023/01/25", dateTimeFormatter));
+
+        AtivoFinanceiro ativoFinanceiro = tituloPublicoLFT;
+
+        AtivoFinanceiro ativoum = new TituloPublicoLFT(LocalDate.parse("2023/01/25", dateTimeFormatter));
+
+
 
     }
 }

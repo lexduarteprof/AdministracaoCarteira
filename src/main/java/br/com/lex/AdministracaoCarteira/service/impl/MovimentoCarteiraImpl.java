@@ -24,11 +24,38 @@ public class MovimentoCarteiraImpl implements IMovimentoCarteira {
     @Override
     public MovimentoDaCarteira incluir(MovimentoDaCarteira movimentoDaCarteira) {
 
-
         return movimentoCarteiraRepository.save(movimentoDaCarteira);
 
-
     }
+
+    public MovimentoDaCarteira adicionarMovimento(MovimentoDaCarteira movimentoDaCarteira) throws Exception {
+
+        if(!ativoRepository.findById(
+                movimentoDaCarteira.getAtivoFinanceiro().getIdAtivoFinanceiro()).isPresent()){
+            throw new Exception("Ativo Inexistente!");
+        }
+
+        if(!carteiraRepository.findById(
+                movimentoDaCarteira.getCarteiraDeAtivos().getIdCarteiraDeAtivos()).isPresent()) {
+            throw new Exception("Carteira Inexistente!");
+        }
+
+        return movimentoCarteiraRepository.save(movimentoDaCarteira);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @Override
     public MovimentoDaCarteira findbymovimentoId(Long Id) {

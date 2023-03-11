@@ -28,4 +28,8 @@ public class CarteiraDeAtivos {
     @JsonIgnore
     private List<MovimentoDaCarteira> movimentoDaCarteira;
 
+
+
+
+
 }
