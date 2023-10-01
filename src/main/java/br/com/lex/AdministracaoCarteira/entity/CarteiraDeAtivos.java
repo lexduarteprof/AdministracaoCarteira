@@ -29,7 +29,4 @@ public class CarteiraDeAtivos {
     private List<MovimentoDaCarteira> movimentoDaCarteira;
 
 
-
-
-
 }

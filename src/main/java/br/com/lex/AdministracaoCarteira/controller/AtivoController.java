@@ -24,7 +24,6 @@ public class AtivoController {
 
     @GetMapping("")
     public List<AtivoFinanceiro> findAll(){
-
         return service.findAll();
 
     }
